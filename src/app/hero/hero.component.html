@@ -1,0 +1,12 @@
+<h1 style="color: black;">{{title}}</h1>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes;">
+      <!-- <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)"> -->
+        <div  (click)="onSelect(hero.name)" style="cursor: pointer;">
+            <span>{{hero.id}}</span>&nbsp;&nbsp;
+            <span class="name">{{hero.name}}</span>
+        </div>
+      <!-- </button> -->
+    </li>
+  </ul>
+ My Hero is {{selectedHero}}
